@@ -1,0 +1,327 @@
+/*
+COLORS:
+#36ff00 -green
+#00af00 -darker green
+#061e00 -darkest green
+#111111 -black
+ */
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Voor de firefox browser, wordt niet goedgekeurt door dee W3C validator
+::-moz-selection {
+    color: #111111;
+    background: #36ff00;
+}
+ */
+
+::selection {
+    color: #111111;
+    background: #36ff00;
+}
+
+body {
+    font-family: "Courier New", Consolas, monospace;
+    padding: 10px 20px;
+    background: #111111;
+    color: #00af00;
+    font-size: 16px;
+}
+
+header,
+footer {
+    display: block;
+    color: #36ff00;
+}
+
+header {
+    text-align: center;
+}
+
+main,
+aside {
+    display: inline-block;
+    border: solid 1px #36ff00;
+    padding: 10px;
+}
+
+main {
+    width: 70%;
+}
+
+aside {
+    width: 25%;
+    vertical-align: top;
+    position: fixed;
+    margin-left: 10px;
+}
+
+aside a {
+    font-size: 2rem;
+}
+
+footer,
+h1 {
+    text-align: center;
+
+}
+
+h1 {
+    margin-bottom: 3rem;
+    display: inline-block;
+}
+
+h1:before {
+    content: 'Flixnet - ';
+    color: #00af00;
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+footer {
+    margin-top: 10rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #36ff00;
+}
+
+a {
+    color: #36ff00;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+a:hover {
+    font-weight: bolder;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=text],
+select {
+    background: #111111;
+    color: #36ff00;
+    border: solid 1px #36ff00;
+    display: block;
+}
+
+label {
+    display: block;
+}
+
+input[type=submit] {
+    color: #00af00;
+    background-color: #111111;
+    border-color: #00af00;
+    margin-top: 10px;
+}
+
+/* custom class and id */
+#sidebar {
+    list-style: none;
+}
+
+.sidebar-active {
+    text-decoration: none;
+    font-style: normal;
+    display: inline-block;
+    background-color: #36ff00;
+    color: #111111;
+    font-weight: bolder;
+}
+
+.catalog {
+    position: relative;
+}
+
+.catalog-item {
+    border: solid 1px lime;
+    background-color: #061e00;
+    padding: 5px;
+    margin: 6px;
+    display: block;
+}
+
+.catalog-item-media {
+    width: 15%;
+    display: inline-block;
+}
+
+.catalog-item-media a {
+    display: block;
+}
+
+.catalog-item-description {
+    width: 80%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.catalog-item img {
+    width: 100%;
+}
+
+div[id^="catalog-category-"]:not(:first-child) {
+    margin-top: 75px;
+}
+
+div[id^="catalog-category-"] {
+    font-size: 2em;
+    font-weight: bolder;
+    margin-bottom: 25px;
+    text-align: center;
+    display: block;
+    border: solid 3px #36ff00;
+    color: #36ff00;
+    padding: 5px 10px;
+}
+
+.user-info-header {
+    float: right;
+}
+
+.user-info-header-name:before {
+    content: "\01F576\00a0";
+}
+
+.user-info-header-name {
+    padding: 5px 10px;
+    background-color: #36ff00;
+    color: #111111;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    width: 100%;
+    border: solid 1px;
+    margin-bottom: 20px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 5px 0;
+}
+
+.dropdown-content a:hover {
+    background-color: #36ff00;
+    color: #111111;
+}
+
+aside .dropdown-content {
+    position: absolute !important;
+    background: #111;
+}
+
+aside .dropdown-name {
+    display: block !important;
+}
+
+.form-wrapper {
+    margin: 5px;
+    padding: 20px;
+    display: inline-block;
+    border: solid 1px #36ff00;
+    background-color: #061e00;
+}
+
+.form-wrapper h2 {
+    margin-top: 0;
+}
+
+.about-us-item {
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+
+/*
+    Worden niet goedgekeurt door de W3C validator
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+ */
+.about-us-item img {
+    border-radius: 50%;
+    width: 50%;
+}
+
+.about-us-item h3 {
+    color: #36ff00;
+}
+
+#content-about-us {
+    text-align: center;
+}
+
+#movie-details {
+    text-align: center;
+}
+
+#movie-details img {
+    width: 25%;
+    border-radius: 5px;
+    border: solid 1px #00af00;
+}
+
+#movie-details table {
+    margin: auto;
+    text-align: left;
+}
+
+#movie-details table,
+#movie-details td,
+#movie-details th {
+    border: solid 1px #36ff00;
+}
+
+.watch-now-button:before {
+    content: '\003E\003E\00a0';
+}
+
+.watch-now-button:after {
+    content: '\00a0\003C\003C';
+}
+
+.subscription-item {
+    width: 30%;
+    display: inline-block;
+    border: solid 1px #36ff00;
+}
+
+.subscription-item-desc {
+    color: #36ff00;
+}
+
+.subscription-item-name {
+    text-align: center;
+    color: #36ff00;
+    border-bottom: solid 1px #00af00;
+}
+
+.subscription-item-price {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #36ff00;
+    margin-bottom: 10px;
+}
+
+.subscription-form {
+
+}

@@ -2,21 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Subscriptions</title>
     <link rel="stylesheet" href="style/style.css">
+
 </head>
 <body>
 <header>
-    <nav></nav>
+    <h1>Subscriptions</h1>
+    <div class="dropdown user-info-header">
+        <p class="dropdown-name user-info-header-name">Baris Urhan</p>
+        <div class="dropdown-content">
+            <a href="profile.html">Profile</a>
+            <a href="logout.html">Log out</a>
+        </div>
+    </div>
 </header>
-<main>
+<main id="content-subscription">
+    <div class="main-top">
+        <h2>Available packets</h2>
+        <p>All prices are a monthly fee</p>
+    </div>
 
+    <div class="main-center">
+        <div class="subscription-item">
+            <h3 class="subscription-item-name">Starter pack</h3>
+            <ul class="subscription-item-desc">
+                <li>Cheap</li>
+                <li>Free</li>
+                <li>Green on black text</li>
+                <li>up to 720p</li>
+            </ul>
+            <p class="subscription-item-price">FREE</p>
+        </div>
+        <div class="subscription-item">
+            <h3 class="subscription-item-name">Supporter pack</h3>
+            <ul class="subscription-item-desc">
+                <li>Full-HD</li>
+                <li>Ad-free</li>
+                <li>Subtitles</li>
+                <li>Emotes in review</li>
+            </ul>
+            <p class="subscription-item-price">&euro;5,-</p>
+        </div>
+        <div class="subscription-item">
+            <h3 class="subscription-item-name">Deluxe Edition pack</h3>
+            <ul class="subscription-item-desc">
+                <li>Free Rune Scimitar in RuneScape</li>
+                <li>Exclusive previews</li>
+                <li>ULTRA-HD</li>
+                <li>Unlimited movies</li>
+            </ul>
+            <p class="subscription-item-price">&euro;10,-</p>
+        </div>
+    </div>
+
+    <br>
+    <div class="form-wrapper">
+        <h2>Enter your login details</h2>
+        <!-- gebruik method POST wanneer je een server hebt runnen -->
+        <form method="GET" action="index.html">
+            <label for="sub-name">
+                Name:
+                <input id="sub-name" type="text">
+            </label>
+            <label for="sub-country">
+                Country:
+                <input id="sub-country" type="text">
+            </label>
+            <label for="sub-bank">
+                Bank:
+                <input id="sub-bank" type="text">
+            </label>
+            <label for="sub-username">
+                Username:
+                <input id="sub-username" type="text">
+            </label>
+            <label for="sub-email">
+                E-mail:
+                <input id="sub-email" type="email">
+            </label>
+            <label for="sub-pass">
+                Password:
+                <input id="sub-pass" type="password">
+            </label>
+            <label for="sub-pass-2">
+                Password:
+                <input id="sub-pass-2" type="password">
+            </label>
+            <label for="sub-subscription">
+                Subscription: <br>
+                <select id="sub-subscription">
+                    <option value="p_starter">Starter Pack</option>
+                    <option value="p_supporter">Supporter Pack</option>
+                    <option value="p_deluxe">Deluxe Edition Pack</option>
+                </select>
+            </label>
+            <label for="submit">
+                <input id="submit" value="submit" type="submit">
+            </label>
+        </form>
+    </div>
 </main>
 <aside>
-
+    <ul id="sidebar">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <a class="dropdown-name" href="catalog.html">Catalog</a>
+            <div class="dropdown-content">
+                <a href="catalog.html#catalog-category-ip">IP hacking</a>
+                <a href="catalog.html#catalog-category-4chan">4chan</a>
+                <a href="catalog.html#catalog-category-pentagon">Pentagon hacking</a>
+                <a href="catalog.html#catalog-category-gui">GUI Interface</a>
+            </div>
+        </li>
+        <li><a class="sidebar-active" href="subscription.html">Subscriptions</a></li>
+        <li><a href="about-us.html">About us</a></li>
+        <li><a href="login.html">login</a></li>
+    </ul>
 </aside>
 <footer>
-
+    &copy; Baris Urhan 2017
 </footer>
 </body>
 </html>
