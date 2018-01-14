@@ -1,5 +1,5 @@
 <?php
-include_once 'load_html.php';
+include_once 'functions.php';
 load_header("Register");
 ?>
     <main>
