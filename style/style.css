@@ -74,8 +74,13 @@ h1 {
     display: inline-block;
 }
 
-h1:before {
-    content: 'Flixnet - ';
+h1 a {
+    font-weight: bolder;
+    font-style: normal;
+    text-decoration: none;
+}
+
+span.page-title{
     color: #00af00;
     font-size: 2rem;
     vertical-align: middle;
@@ -225,7 +230,7 @@ div[id^="catalog-category-"] {
 }
 
 aside .dropdown-content {
-    position: absolute !important;
+    position: relative !important;
     background: #111;
 }
 
