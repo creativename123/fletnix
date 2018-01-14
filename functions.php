@@ -1,4 +1,5 @@
 <?php
+include_once "db/connection.php";
 
 function load_header($header_name = "")
 {
