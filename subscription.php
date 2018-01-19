@@ -7,7 +7,6 @@ load_header("Register");
             <h2>Available packets</h2>
             <p>All prices are a monthly fee</p>
         </div>
-
         <div class="main-center">
             <div class="subscription-item">
                 <h3 class="subscription-item-name">Starter pack</h3>
@@ -40,48 +39,81 @@ load_header("Register");
                 <p class="subscription-item-price">&euro;10,-</p>
             </div>
         </div>
-
         <br>
         <div class="form-wrapper">
-            <h2>Enter your login details</h2>
-            <!-- gebruik method POST wanneer je een server hebt runnen -->
-            <form method="GET" action="index.html">
-                <label for="sub-name">
-                    Name:
-                    <input id="sub-name" type="text">
-                </label>
-                <label for="sub-country">
-                    Country:
-                    <input id="sub-country" type="text">
-                </label>
-                <label for="sub-bank">
-                    Bank:
-                    <input id="sub-bank" type="text">
-                </label>
-                <label for="sub-username">
-                    Username:
-                    <input id="sub-username" type="text">
-                </label>
-                <label for="sub-email">
+            <h2>Register to Fletnix</h2>
+            <form method="POST" action="register.php">
+                <label for="email">
                     E-mail:
-                    <input id="sub-email" type="email">
                 </label>
-                <label for="sub-pass">
-                    Password:
-                    <input id="sub-pass" type="password">
+                <input id="email" name="email" type="email">
+
+                <label for="lastname">
+                    Last name:
                 </label>
-                <label for="sub-pass-2">
-                    Password:
-                    <input id="sub-pass-2" type="password">
+                <input id="lastname" name="lastname" type="text">
+
+                <label for="firstname">
+                    First name:
                 </label>
-                <label for="sub-subscription">
+                <input id="firstname" name="firstname" type="text">
+
+                <label for="payment_method">
+                    Payment method:
+                </label>
+                <select id="payment_method" name="payment_method">
+                    <option value="Mastercard">Mastercard</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Amex">Amex</option>
+                </select>
+                
+                <label for="payment_number">
+                    Payment card number:
+                </label>
+                <input id="payment_number" name="payment_number" type="text">
+
+                <label for="subscription">
                     Subscription: <br>
-                    <select id="sub-subscription">
-                        <option value="p_starter">Starter Pack</option>
-                        <option value="p_supporter">Supporter Pack</option>
-                        <option value="p_deluxe">Deluxe Edition Pack</option>
-                    </select>
                 </label>
+                <select id="subscription" name="subscription">
+                    <option value="Basic">Starter Pack</option>
+                    <option value="Premium">Supporter Pack</option>
+                    <option value="Pro">Deluxe Edition Pack</option>
+                </select>
+	
+                <label for="username">
+                    Username:
+                </label>
+                <input id="username" name="username" type="text">
+
+                <label for="password">
+                    Password:
+                </label>
+                <input id="password" name="password" type="password">
+
+                <label for="password_validate">
+                    Validate password:
+                </label>
+                <input id="password_validate" name="password_validate" type="password">
+
+                <label for="country_name">
+                    Country name:
+                </label>
+                <input id="country_name" name="country_name" type="text">
+
+                <label for="gender">
+                    Gender: <br>
+                </label>
+                <select id="gender" name="gender">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+
+                <label for="birth_date">
+                    Birth date:
+                </label>
+                <input id="birth_date" name="birth_date" type="text" placeholder="YYYY-MM-DD">
+                
                 <label for="submit">
                     <input id="submit" value="submit" type="submit">
                 </label>

@@ -1,6 +1,6 @@
 /*
 COLORS:
-#36ff00 -green
+#35d200 -green
 #00af00 -darker green
 #061e00 -darkest green
 #111111 -black
@@ -14,13 +14,13 @@ html {
 /* Voor de firefox browser, wordt niet goedgekeurt door dee W3C validator
 ::-moz-selection {
     color: #111111;
-    background: #36ff00;
+    background: #35d200;
 }
  */
 
 ::selection {
     color: #111111;
-    background: #36ff00;
+    background: #35d200;
 }
 
 body {
@@ -34,7 +34,7 @@ body {
 header,
 footer {
     display: block;
-    color: #36ff00;
+    color: #35d200;
 }
 
 header {
@@ -44,7 +44,7 @@ header {
 main,
 aside {
     display: inline-block;
-    border: solid 1px #36ff00;
+    border: solid 1px #35d200;
     padding: 10px;
 }
 
@@ -80,7 +80,7 @@ h1 a {
     text-decoration: none;
 }
 
-span.page-title{
+span.page-title {
     color: #00af00;
     font-size: 2rem;
     vertical-align: middle;
@@ -96,11 +96,11 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
-    color: #36ff00;
+    color: #35d200;
 }
 
 a {
-    color: #36ff00;
+    color: #35d200;
     font-weight: lighter;
     font-style: italic;
 }
@@ -115,8 +115,8 @@ input[type=password],
 input[type=text],
 select {
     background: #111111;
-    color: #36ff00;
-    border: solid 1px #36ff00;
+    color: #35d200;
+    border: solid 1px #35d200;
     display: block;
 }
 
@@ -131,6 +131,20 @@ input[type=submit] {
     margin-top: 10px;
 }
 
+#movie-player {
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+}
+
+#movie-player > iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 /* custom class and id */
 #sidebar {
     list-style: none;
@@ -140,7 +154,7 @@ input[type=submit] {
     text-decoration: none;
     font-style: normal;
     display: inline-block;
-    background-color: #36ff00;
+    background-color: #35d200;
     color: #111111;
     font-weight: bolder;
 }
@@ -150,8 +164,8 @@ input[type=submit] {
 }
 
 .catalog-item {
-    border: solid 1px lime;
-    background-color: #061e00;
+    border: solid 1px #36ff00;
+    background-color: transparent;
     padding: 5px;
     margin: 6px;
     display: block;
@@ -186,8 +200,8 @@ div[id^="catalog-category-"] {
     margin-bottom: 25px;
     text-align: center;
     display: block;
-    border: solid 3px #36ff00;
-    color: #36ff00;
+    border: solid 3px #35d200;
+    color: #35d200;
     padding: 5px 10px;
 }
 
@@ -199,9 +213,10 @@ div[id^="catalog-category-"] {
     content: "\01F576\00a0";
 }
 
-.user-info-header-name {
+.user-info-header-name,
+.user-info-header-name * {
     padding: 5px 10px;
-    background-color: #36ff00;
+    background-color: #35d200;
     color: #111111;
     font-weight: bolder;
     font-size: 1.1rem;
@@ -225,7 +240,7 @@ div[id^="catalog-category-"] {
 }
 
 .dropdown-content a:hover {
-    background-color: #36ff00;
+    background-color: #35d200;
     color: #111111;
 }
 
@@ -242,8 +257,8 @@ aside .dropdown-name {
     margin: 5px;
     padding: 20px;
     display: inline-block;
-    border: solid 1px #36ff00;
-    background-color: #061e00;
+    border: solid 1px #35d200;
+    background-color: transparent;
 }
 
 .form-wrapper h2 {
@@ -267,7 +282,7 @@ aside .dropdown-name {
 }
 
 .about-us-item h3 {
-    color: #36ff00;
+    color: #35d200;
 }
 
 #content-about-us {
@@ -292,7 +307,7 @@ aside .dropdown-name {
 #movie-details table,
 #movie-details td,
 #movie-details th {
-    border: solid 1px #36ff00;
+    border: solid 1px #35d200;
 }
 
 .watch-now-button:before {
@@ -306,16 +321,16 @@ aside .dropdown-name {
 .subscription-item {
     width: 30%;
     display: inline-block;
-    border: solid 1px #36ff00;
+    border: solid 1px #35d200;
 }
 
 .subscription-item-desc {
-    color: #36ff00;
+    color: #35d200;
 }
 
 .subscription-item-name {
     text-align: center;
-    color: #36ff00;
+    color: #35d200;
     border-bottom: solid 1px #00af00;
 }
 
@@ -323,10 +338,28 @@ aside .dropdown-name {
     text-align: center;
     font-weight: bold;
     font-size: 1.5rem;
-    color: #36ff00;
+    color: #35d200;
     margin-bottom: 10px;
 }
 
 .subscription-form {
 
+}
+
+#sidebar_catalog_genre {
+    width: 25%;
+    vertical-align: top;
+    position: fixed;
+    margin-left: 10px;
+    bottom: 10px;
+    right: 0;
+}
+
+#sidebar_catalog_genre ul {
+    list-style: none;
+    font-size: 1em;
+}
+
+.genre-search-header {
+    margin-bottom: 0;
 }
