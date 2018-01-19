@@ -18,20 +18,24 @@ if (isset($_GET['m']) && is_numeric($_GET['m']) && $result_rows == 1) {
 	$result_movie_director = $db_con->query($sql_movie_director);
 	$result_movie_genre = $db_con->query($sql_movie_genre);
 	
+	
 	foreach ($result_movie_details as $movie) {
-		load_header($movie['title']);
-		
-		echo "<main id=\"movie-details\">
+		if (isset($_GET['player'])) {
+			load_header($movie['title']);
+			echo "<div id=\"movie-player\">" . $movie['URL'] . "</div>";
+		} else {
+			load_header($movie['title']);
+			echo "<main id=\"movie-details\">
 					<h2>" . $movie['title'] . "</h2>
 					<img src=\"movie_posters/";
-		if (!is_null($movie['cover_image'])) {
-			echo $movie['cover_image'] . "\" alt=\"Movie poster\">";
-		} else {
-			echo "404.png\"" . "alt=\"Movie poster not found\">";
-		}
-		echo "
+			if (!is_null($movie['cover_image'])) {
+				echo $movie['cover_image'] . "\" alt=\"Movie poster\">";
+			} else {
+				echo "404.png\"" . "alt=\"Movie poster not found\">";
+			}
+			echo "
 					<br>
-					<a class=\"watch-now-button\" href=\"" . $movie['URL'] . "\">WATCH NOW</a>
+					<a class=\"watch-now-button\" href=\"movie.php?m=" . $movie['movie_id'] . "&player=1" . "\">WATCH NOW</a>
 					<p>" . $movie['description'] . "</p>
 					<table>
 						<tr>
@@ -45,12 +49,12 @@ if (isset($_GET['m']) && is_numeric($_GET['m']) && $result_rows == 1) {
 						<tr>
 							<td>Director</td>
 							<td>";
-		
-		foreach ($result_movie_director as $director) {
-			echo $director['firstname'] . " " . $director['lastname'] . ", ";
-		}
-		
-		echo "</td>
+			
+			foreach ($result_movie_director as $director) {
+				echo $director['firstname'] . " " . $director['lastname'] . ", ";
+			}
+			
+			echo "</td>
 						</tr>
 						<tr>
 							<td>Duration</td>
@@ -62,8 +66,9 @@ if (isset($_GET['m']) && is_numeric($_GET['m']) && $result_rows == 1) {
 						</tr>
 					</table>
 				</main>";
-		load_sidebar();
-		load_footer();
+			load_sidebar();
+			load_footer();
+		}
 	}
 } else {
 	load_header("No movie found");
