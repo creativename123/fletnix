@@ -279,6 +279,7 @@ aside .dropdown-name {
 .about-us-item img {
     border-radius: 50%;
     width: 50%;
+    height: 200px;
 }
 
 .about-us-item h3 {

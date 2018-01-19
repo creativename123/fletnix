@@ -19,7 +19,8 @@ function load_header($header_name = "")
     <div class=\"dropdown user-info-header\">";
 	
 	if (isset($_SESSION['login'])) {
-		echo "<p class=\"dropdown-name user-info-header-name\">" . $_SESSION['customer_name'] . "</p>
+		echo "            <p style='font-size: 14px; margin: 0'>" . $_SESSION['login_time'] . "</p>
+<p class=\"dropdown-name user-info-header-name\">" . $_SESSION['customer_name'] . "</p>
         <div class=\"dropdown-content\">
             <a href=\"profile.php\">Profile</a>
             <a href=\"logout.php\">Log out</a>

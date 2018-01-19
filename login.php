@@ -17,7 +17,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 			if ($_GET['redirect']) {
 				header("Location: " . $_GET['redirect']);
 			} else {
-				header("Location: profile.php");
+				header("Location: catalog.php");
 			}
 		} else {
 			echo "<h2>Probeer het opnieuw</h2>";
@@ -31,7 +31,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         <div class="form-wrapper">
             <h2>Enter your login details, <?php
 				if (isset($_GET['message'])) {
-				    echo $_GET['message'];
+					echo $_GET['message'];
 				}
 				?></h2>
             <form method="POST" action="login.php">
